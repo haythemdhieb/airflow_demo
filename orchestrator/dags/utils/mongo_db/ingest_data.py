@@ -1,5 +1,5 @@
 import pymongo
-from mongo_db.db_settings import MongoSettings
+from utils.mongo_db.db_settings import MongoSettings
 from typing import List
 from loguru import logger
 import json

@@ -1,6 +1,8 @@
 URL = "https://api.cora.fr/api/magasins/167/navigation-content/C-176673"
+CLEAN_DATA_PATH= "./products_information.json"
+RAW_DATA_PATH="./raw_products_information.json"
 PHOTO_DIMENSION = 460
-QUERY_STRING = {"filters^\\[NW-13260-corapro^\\]^\\[0^\\]": "NW-13260-corapro~0"}
+QUERY_PARAMS= {"filters^\\[NW-13260-corapro^\\]^\\[0^\\]": "NW-13260-corapro~0"}
 HEADERS = {
     "cookie": "nlbi_2346747=yex0fLiSjQR0jE%2B0rtkoMQAAAADQAq6HXFNCjjPpM%2FAml4oF; visid_incap_2346747=cwXoJ2WzT66CsSAJH81O%2FoNI6mIAAAAAQUIPAAAAAAA7qTj8sP6QYqPtyYVc%2Fd%2Bb; incap_ses_1576_2346747=g3ShDomB6Epj3IVcyRPfFfVI6mIAAAAA4sWW3sM%2F%2Bm2RkLRZ9xJ8sw%3D%3D",
     "authority": "api.cora.fr",
