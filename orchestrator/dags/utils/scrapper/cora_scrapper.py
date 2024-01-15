@@ -5,7 +5,7 @@ from loguru import logger
 from requests import request
 from requests.exceptions import RequestException
 
-from scrapper.configurations import Regexes, HEADERS, QUERY_STRING, URL, PHOTO_DIMENSION
+from utils.scrapper.configurations import RAW_DATA_PATH, Regexes, PHOTO_DIMENSION, CLEAN_DATA_PATH
 
 
 def scrap_all_data(url: str, header: dict, query_params: dict) -> dict:
@@ -25,6 +25,10 @@ def scrap_all_data(url: str, header: dict, query_params: dict) -> dict:
     except RequestException as error:
         logger.error("Something went wrong while fetching data from the url {} \n".format(url))
         logger.error(str(error))
+
+    with open(RAW_DATA_PATH, 'w') as file:
+        json.dump(data, file)
+
     return data
 
 
@@ -44,7 +48,7 @@ def clean_photos_url(photo_url: str, photo_dimension: str) -> str:
     return photo_url
 
 
-def clean_data(scraped_data: dict) -> list:
+def clean_data() -> list:
     """
     Get all products from the scrapped data and reformat attributes
     Args:
@@ -53,6 +57,8 @@ def clean_data(scraped_data: dict) -> list:
         products(list): a list containing all product with their relevant information
 
     """
+    with open(RAW_DATA_PATH, 'r') as file:
+        scraped_data = json.load(file)
     products = []
     try:
         for product in scraped_data["data"]["attributes"]["product_list"]["data"]:
@@ -65,15 +71,8 @@ def clean_data(scraped_data: dict) -> list:
     except KeyError as error:
         logger.error(str(error))
         logger.error("The data scrapped has an invalid schema")
+
+    with open(CLEAN_DATA_PATH, 'w') as file:
+        json.dump(products, file)
+
     return products
-
-
-def store_data_json(products_infos: list) -> None:
-    """
-    Stores all products' information in a json file
-    Args:
-        products_infos(list): list containing products information
-
-    """
-    with open('product_information.json', 'w') as file:
-        json.dump(products_infos, file)

@@ -1,0 +1,9 @@
+pymongo
+pydantic-settings
+pydantic
+loguru
+pymongo
+pydantic-settings
+pydantic
+loguru
+requests
