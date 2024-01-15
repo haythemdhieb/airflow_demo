@@ -9,8 +9,7 @@ N.B: For simplicity sake, we scrapped only [https://www.cora.fr/faire_mes_course
 
 Before running the project please check that you have docker installed.
 
-## Project structure (Script Mode)
-================================================================================
+## Project structure
 
 This is the folder structure of the project:
 
