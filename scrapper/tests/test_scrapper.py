@@ -1,5 +1,5 @@
 from cora_scrapper import scrap_all_data, clean_data
-from .conftest import URL, HEADERS, QUERY_STRING, fake_data
+from scrapper.tests.conftest import URL, HEADERS, QUERY_STRING, fake_data
 
 
 def test_scrap_all_data():
