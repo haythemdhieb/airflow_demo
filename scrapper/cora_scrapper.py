@@ -5,7 +5,7 @@ from loguru import logger
 from requests import request
 from requests.exceptions import RequestException
 
-from configurations import Regexes, HEADERS, QUERY_STRING, URL, PHOTO_DIMENSION
+from scrapper.configurations import Regexes, HEADERS, QUERY_STRING, URL, PHOTO_DIMENSION
 
 
 def scrap_all_data(url: str, header: dict, query_params: dict) -> dict:

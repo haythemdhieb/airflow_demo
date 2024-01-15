@@ -33,18 +33,18 @@ fake_data = {
     "type": "navigation-content",
     "id": "C-176673",
     "attributes": {
-      "title": "Hygi\u00e8ne,soin et accessoires chat",
+      "title": "Hygiène,soin et accessoires chat",
       "description": "Notre rayon animalerie vous propose de nombreux produits d'alimentation et d'accessoires d\u00e9di\u00e9s aux animaux de compagnie et \u00e0 leur bien-\u00eatre.",
       "layout_type": "Grid",
-      "pim_category_code": "Hygi\u00e8ne,soin_et_accessoires_chat",
+      "pim_category_code": "Hygiène,soin_et_accessoires_chat",
       "product_list": {
         "data": [
           {
             "type": "produits",
             "id": "1004029",
             "attributes": {
-              "designation": "Riga sachets plastique avec poign\u00e9es pour liti\u00e8re x8 50x38,5 cm",
-              "description": "Les sachets plastiques aident \u00e0 \u00e9viter l'usure du bac \u00e0 liti\u00e8re et \u00e0 un nettoyage plus simple de celle-ci. Les poign\u00e9es permettent une meilleure prise en main du sac plastique.",
+              "designation": "Riga sachets plastique",
+              "description": "Les sachets plastiques aident à éviter l'usure du bac.",
               "marque": "RIGA",
               "prix": "5.99",
               "prix_ht": "4.99",
